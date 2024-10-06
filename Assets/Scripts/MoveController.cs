@@ -17,6 +17,13 @@ public class MoveController : MonoBehaviour
     public Transform wallCheckPoint;
 
     Vector2 relativeTransform;
+
+
+    //Video5
+    public bool isOnPlatform;
+    public Rigidbody2D platformRb;
+
+    //public ParticleController particleController;
     private void Awake()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -29,11 +36,21 @@ public class MoveController : MonoBehaviour
     {
         UpdateSpeedMultiplier();
         float targetSpeed = speed * speedMultiplier * relativeTransform.x;
-        rb.velocity=new Vector2(targetSpeed, rb.velocity.y);
+        //Se cambia al if video 5 para las platformas//rb.velocity=new Vector2(targetSpeed, rb.velocity.y);
+        //Video5 cambios
+        if(isOnPlatform)
+        {
+            rb.velocity= new Vector2(targetSpeed+platformRb.velocity.x,rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity= new Vector2(targetSpeed,rb.velocity.y);
+        }
 
         isWallTouch=Physics2D.OverlapBox(wallCheckPoint.position,new Vector2(0.1f,0.5f),0,wallLayer);
         if(isWallTouch)
         {
+            //particleController.PlayParticle(ParticleController.Particles.touch, wallCheckPoint.position);
             Flip();
         }
     }
