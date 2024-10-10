@@ -23,7 +23,8 @@ public class MoveController : MonoBehaviour
     public bool isOnPlatform;
     public Rigidbody2D platformRb;
 
-    //public ParticleController particleController;
+     public ParticleController particleController;
+
     private void Awake()
     {
         rb=GetComponent<Rigidbody2D>();
@@ -50,7 +51,7 @@ public class MoveController : MonoBehaviour
         isWallTouch=Physics2D.OverlapBox(wallCheckPoint.position,new Vector2(0.1f,0.5f),0,wallLayer);
         if(isWallTouch)
         {
-            //particleController.PlayParticle(ParticleController.Particles.touch, wallCheckPoint.position);
+            //particleController.PlayTouchParticle(wallCheckPoint.position);
             Flip();
         }
     }
