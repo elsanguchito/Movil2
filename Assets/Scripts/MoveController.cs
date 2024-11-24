@@ -192,10 +192,6 @@ public class MoveController : MonoBehaviour
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fastFallMultiplier - 1) * Time.fixedDeltaTime;
         }
-        else
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-        }
     }
 
     public void Move(InputAction.CallbackContext value)
