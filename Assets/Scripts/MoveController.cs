@@ -12,7 +12,6 @@ public class MoveController : MonoBehaviour
     public LayerMask groundLayer;
     public LayerMask slideWallLayer;
     public Transform wallCheckPoint;
-    public Transform groundCheckPoint;
     public Transform cornerCheckPoint;
     public Rigidbody2D platformRb;
     public ParticleController particleController;
@@ -39,6 +38,8 @@ public class MoveController : MonoBehaviour
     public bool isOnPlatform;
     private bool isGrounded;
     private bool isCorner;
+    public Vector2 boxSize;
+    public float castDistance;
 
     [Header("Ajustes de Wall Slide")]
     private bool isWallSliding = false;
@@ -142,7 +143,7 @@ public class MoveController : MonoBehaviour
 
     private void HandleGroundCheck()
     {
-        isGrounded = Physics2D.OverlapBox(groundCheckPoint.position, new Vector2(0.6f, 0.1f), 0, collisionLayers);
+        isGrounded = Physics2D.BoxCast(transform.position, boxSize, 0, -transform.up, castDistance, collisionLayers);
 
         if (isGrounded)
         {
@@ -160,7 +161,7 @@ public class MoveController : MonoBehaviour
     {
         isCorner = Physics2D.OverlapBox(cornerCheckPoint.position, new Vector2(0.723f, 0.713f), 0, collisionLayers);
 
-        if (isCorner)
+        if (isCorner && !isGrounded)
         {
             Vector2 currentVelocity = rb.velocity;
 
@@ -171,11 +172,6 @@ public class MoveController : MonoBehaviour
                 rb.velocity = new Vector2(-horizontalBounce * cornerBounceForce, cornerBounceForce);
             }
         }
-    }
-
-    private IEnumerator EnableMovementAfterDelay()
-    {
-        yield return new WaitForSeconds(0.2f);
     }
 
     private void ApplySlideWall()
