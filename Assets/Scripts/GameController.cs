@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
     Vector2 checkPointPos;
 
-    //SpriteRenderer spriteRenderer;
     Rigidbody2D playerRb;
     private void Awake(){
         //playerRb=GetComponent<Rigidbody2D>();
@@ -25,7 +23,6 @@ public class GameController : MonoBehaviour
         {
             Die();
         }
-
     }
     void Die()
     {
