@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
             Die();
         }
     }
-    void Die()
+    public void Die()
     {
         StartCoroutine(Respawn(0.0f));
     }

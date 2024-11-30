@@ -23,7 +23,7 @@ public class MoveController : MonoBehaviour
     private float speedMultiplier;
     private Vector2 relativeTransform;
     private bool btnPressed;
-    private float cornerBounceCooldown = 0.2f;
+    private readonly float cornerBounceCooldown = 0.2f;
     private float lastBounceTime = -1f;
 
     [Header("Ajustes de salto")]
