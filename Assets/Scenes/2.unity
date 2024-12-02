@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2963543537253971285, guid: cd0b4c5af6a9b06499acba6d16870612, type: 3}
       propertyPath: spawnInterval
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4853928855004628060, guid: cd0b4c5af6a9b06499acba6d16870612, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5276,7 +5276,7 @@ Transform:
   - {fileID: 1869428277}
   m_Father: {fileID: 1994704442}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!43 &1520695729
+--- !u!43 &1508728312
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6842,8 +6842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d1872d9cb9757549814d58c54cf694c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0
-  positionOffset: {x: 3, y: 3.5, z: -10}
+  smoothTime: 0.1
+  positionOffset: {x: 3, y: 3, z: -10}
   xLimit: {x: 0, y: 0}
   yLimit: {x: 0, y: 0}
 --- !u!81 &2005011191
@@ -6889,7 +6889,7 @@ Camera:
   far clip plane: 1000
   field of view: 50
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
