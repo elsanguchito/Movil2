@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Ground
   - Audio
+  - Background
+  - DarkZone
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - Wall
   - Ground
   - SlideWall
-  - 
-  - 
+  - Background
+  - Emphy
   - 
   - 
   - 
@@ -43,4 +45,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Wall
+    uniqueID: 3334109263
+    locked: 0
+  - name: Ground
+    uniqueID: 1812115273
+    locked: 0
+  - name: SlideWall
+    uniqueID: 617809811
+    locked: 0
+  - name: Background
+    uniqueID: 3136902513
     locked: 0
