@@ -7,6 +7,7 @@ public class CannonControler : MonoBehaviour
     public float rotationSpeed = 100f;
     public float lifetime = 5f;      // Tiempo antes de destruir el objeto
     public Vector2 shootDirection = Vector2.right; // Dirección del disparo inicial
+    public bool useGravity = true;  // Control de la gravedad (1 activada, 0 desactivada)
 
     private Rigidbody2D rb;
 
@@ -22,6 +23,9 @@ public class CannonControler : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Alterna la gravedad según la propiedad `useGravity`
+        rb.gravityScale = useGravity ? 1f : 0f;
+
         // Si el objeto toca el suelo, aplica velocidad constante horizontal
         if (rb.velocity.y <= 0.1f && Mathf.Abs(rb.velocity.y) < 0.01f)
         {
@@ -43,7 +47,7 @@ public class CannonControler : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        if (!collision.gameObject.CompareTag("Ground"))
+        if (!collision.gameObject.CompareTag("Ground") && !collision.gameObject.CompareTag("Background"))
         {
             Destroy(gameObject);
         }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1403026434966751759}
   - component: {fileID: 6560817279216351684}
   m_Layer: 0
-  m_Name: Cannon
+  m_Name: Cannon 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,5 +164,6 @@ MonoBehaviour:
   shootForce: 10
   rollingSpeed: 5
   rotationSpeed: 100
-  lifetime: 20
+  lifetime: 10
   shootDirection: {x: -1, y: 0}
+  useGravity: 0

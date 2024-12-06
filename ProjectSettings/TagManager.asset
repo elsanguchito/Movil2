@@ -9,6 +9,7 @@ TagManager:
   - Audio
   - Background
   - DarkZone
+  - Key
   layers:
   - Default
   - TransparentFX
