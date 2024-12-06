@@ -253,7 +253,7 @@ public class MoveController : MonoBehaviour
     {
         if (context.performed)
         {  
-            rb.gravityScale = 0.4f;
+            rb.gravityScale = 0.5f;
 
         }
         else if (context.canceled)
