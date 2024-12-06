@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd55f2156e9f64498386e5c9e9c656b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootForce: 12
+  shootForce: 10
   rollingSpeed: 6
   rotationSpeed: 100
   lifetime: 20

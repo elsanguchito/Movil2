@@ -164,6 +164,6 @@ MonoBehaviour:
   shootForce: 10
   rollingSpeed: 5
   rotationSpeed: 100
-  lifetime: 10
+  lifetime: 30
   shootDirection: {x: -1, y: 0}
   useGravity: 0

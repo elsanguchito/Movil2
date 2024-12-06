@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class KeyController : MonoBehaviour
 {
-    public bool isFollowing = false; // Indica si la llave sigue al jugador
+    public bool isFollowing = false;
     public Transform player; // Referencia al transform del jugador
     public float followSpeed = 5f; // Velocidad de seguimiento
 

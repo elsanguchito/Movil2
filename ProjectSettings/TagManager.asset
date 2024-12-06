@@ -10,6 +10,7 @@ TagManager:
   - Background
   - DarkZone
   - Key
+  - Key2
   layers:
   - Default
   - TransparentFX
