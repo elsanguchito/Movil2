@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootForce: 10
-  rollingSpeed: 6
+  rollingSpeed: 5
   rotationSpeed: 100
   lifetime: 20
   shootDirection: {x: -1, y: 0}
